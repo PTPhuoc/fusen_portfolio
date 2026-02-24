@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --blue-normal: #00b7ff;
+  --blue-dark-1: #108ab1;
+  --blue-dark-2: #073a4b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@theme {
+  --color-blueDark1: var(--blue-dark-1);
+  --color-blueDark2: var(--blue-dark-2);
+  --color-blueNormal: var(--blue-normal);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+}
+
+.shadowDefault {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.no-scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.scroll-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background: #bce4ff;
+  border-radius: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb:hover {
+  background: #374b9e;
+}
+
+.fromRight {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--delay);
+}
+
+.fromLeft {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--delay);
+}
+
+.fromTop {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--delay);
+}
+
+.fromBottom {
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition-delay: var(--delay);
+}
+
+.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
