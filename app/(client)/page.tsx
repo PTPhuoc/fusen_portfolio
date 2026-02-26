@@ -4,46 +4,14 @@ import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { AnimationDefault } from "../lib/animation";
 
 export default function page() {
   const router = useRouter();
   
   useEffect(() => {
-    const element = document.querySelectorAll(
-      ".fromLeft, .fromRight, .fromTop, .fromBottom",
-    );
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let lastClass = "";
-        let count = 0;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const currentClass = [
-              "fromLeft",
-              "fromRight",
-              "fromTop",
-              "fromBottom",
-            ].find((cls) => entry.target.classList.contains(cls));
-            if (currentClass && currentClass === lastClass) {
-              count++;
-            } else {
-              count = 0;
-            }
-            lastClass = currentClass ?? "";
-            (entry.target as HTMLElement).style.setProperty(
-              "--delay",
-              `${count * 0.3}s`,
-            );
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    element.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const animationDefault = AnimationDefault()
+    return () => animationDefault.disconnect();
   }, []);
 
   return (
@@ -226,7 +194,7 @@ export default function page() {
         <div className="flex max-2xl:flex-wrap gap-5 items-stretch">
           <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
             <div className="flex items-center self-start bg-[#0C6478] rounded-full">
-              <div className="w-20 h-20 bg-[#CFF3FF] flex justify-center items-center rounded-full">
+              <div className="w-20 h-20 shrink-0 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
                   className="w-14 h-14 fill-blueDark1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +213,7 @@ export default function page() {
           </div>
           <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
             <div className="flex items-center self-start bg-[#0C6478] rounded-full">
-              <div className="w-20 h-20 bg-[#CFF3FF] flex justify-center items-center rounded-full">
+              <div className="w-20 h-20 shrink-0 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
                   className="w-14 h-14 fill-blueDark1"
                   xmlns="http://www.w3.org/2000/svg"

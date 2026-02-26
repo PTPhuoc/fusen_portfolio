@@ -3,51 +3,19 @@
 import { CldImage } from "next-cloudinary";
 import { useEffect } from "react";
 import Link from "next/link";
+import { AnimationDefault } from "@/app/lib/animation";
 
 export default function page() {
   useEffect(() => {
-    const element = document.querySelectorAll(
-      ".fromLeft, .fromRight, .fromTop, .fromBottom",
-    );
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let lastClass = "";
-        let count = 0;
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const currentClass = [
-              "fromLeft",
-              "fromRight",
-              "fromTop",
-              "fromBottom",
-            ].find((cls) => entry.target.classList.contains(cls));
-            if (currentClass && currentClass === lastClass) {
-              count++;
-            } else {
-              count = 0;
-            }
-            lastClass = currentClass ?? "";
-            (entry.target as HTMLElement).style.setProperty(
-              "--delay",
-              `${count * 0.3}s`,
-            );
-            entry.target.classList.add("active");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.2 },
-    );
-
-    element.forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
+    const animationDefault = AnimationDefault()
+    return () => animationDefault.disconnect();
   }, []);
 
   return (
     <div className="w-full pt-25 flex flex-col gap-10 items-center">
       <div className="w-[70%] max-2xl:w-[80%] max-md:w-[95%] flex items-center gap-5 pt-10">
-        <p className="text-blueDark2 font-bold fromRight">11/2025 - 12/2025</p>
-        <div className="flex-1 h-1 bg-blueDark2 rounded-2xl fromRight"></div>
+        <p className="text-blueDark2 font-bold fromRight">11/2024 - 12/2024</p>
+        <div className="flex-1 h-1 bg-blueDark2 rounded-2xl fromLeft"></div>
       </div>
       <div className="w-[70%] max-2xl:w-[80%] max-md:w-[95%] flex flex-col shadowDefault rounded-2xl">
         <div className="relative overflow-hidden rounded-2xl shadowDefault fromBottom">
@@ -85,7 +53,7 @@ export default function page() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-wrap gap-5 justify-center p-5">
+        <div className="flex flex-col gap-5 justify-center p-5">
           <div className="flex flex-col gap-3 max-md:max-w-100">
             <p className="font-bold bg-blueDark2 px-2 rounded-md text-white fromRight">
               Internship
@@ -109,14 +77,14 @@ export default function page() {
           </div>
           <div className="flex items-center justify-center gap-5 max-xl:flex-wrap min-w-100">
             <CldImage
-              className="2xl:translate-y-10 rounded-2xl shadowDefault fromLeft "
+              className="2xl:translate-y-10 rounded-2xl shadowDefault fromTop"
               src="https://res.cloudinary.com/dhjbseski/image/upload/v1771955115/exp_postfolio_1_connuz.jpg"
               alt="avata"
               width={400}
               height={300}
             ></CldImage>
             <CldImage
-              className="2xl:-translate-y-10 z-1 rounded-2xl shadowDefault fromLeft"
+              className="2xl:-translate-y-10 z-1 rounded-2xl shadowDefault fromBottom"
               src="https://res.cloudinary.com/dhjbseski/image/upload/v1771955115/exp_postfolio_2_pzkzbu.jpg"
               alt="avata"
               width={400}
