@@ -39,7 +39,7 @@ export default function page() {
           <CldImage
             className="absolute shadow-2xl object-cover"
             src="https://res.cloudinary.com/dhjbseski/image/upload/v1772120151/total_job_Image_zei9q7.png"
-            alt="avata"
+            alt="Sorry for your experience. It seems the cloud service has run out."
             fill
           ></CldImage>
         </div>
@@ -351,7 +351,7 @@ export default function page() {
                 <CldImage
                   className={`absolute shadow-2xl ${expandImage ? "object-contain" : "object-cover"}  `}
                   src="https://res.cloudinary.com/dhjbseski/image/upload/v1772124178/class_dirgam_total_job_tb0ukp.png"
-                  alt="avata"
+                  alt="Sorry for your experience. It seems the cloud service has run out."
                   fill
                 ></CldImage>
                 <div

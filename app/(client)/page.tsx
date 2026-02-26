@@ -20,7 +20,7 @@ export default function page() {
         <CldImage
           className="rounded-2xl shadow-2xl fromRight"
           src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121178/about_postfolio_ropgnr.webp"
-          alt="avata"
+          alt="Sorry for your experience. It seems the cloud service has run out."
           width={500}
           height={300}
         ></CldImage>
@@ -104,7 +104,7 @@ export default function page() {
           <CldImage
             className="rounded-2xl shadow-2xl fromLeft"
             src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/about_postfolio_pc_oj7p1v.webp"
-            alt="avata"
+            alt="Sorry for your experience. It seems the cloud service has run out."
             width={500}
             height={300}
           ></CldImage>
@@ -115,7 +115,7 @@ export default function page() {
         <CldImage
           className="rounded-2xl shadow-2xl fromTop"
           src="https://res.cloudinary.com/dhjbseski/image/upload/v1771987749/HCMUNRE_TruSo_1_h0xhwz.jpg"
-          alt="avata"
+          alt="Sorry for your experience. It seems the cloud service has run out."
           width={2000}
           height={200}
         ></CldImage>
@@ -127,7 +127,7 @@ export default function page() {
             <CldImage
               className="fromRight"
               src="https://res.cloudinary.com/dhjbseski/image/upload/v1771958960/Logo-truong-hcmunre_vqyxlx.png"
-              alt="avata"
+              alt="Sorry for your experience. It seems the cloud service has run out."
               width={100}
               height={100}
             ></CldImage>

@@ -24,7 +24,7 @@ export default function page() {
           <CldImage
             className="absolute object-cover z-1"
             src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121589/exp_postfolio_2_bntcds.webp"
-            alt="avata"
+            alt="Sorry for your experience. It seems the cloud service has run out."
             fill
           ></CldImage>
           <div className="flex gap-5 items-center justify-between p-5">
@@ -32,7 +32,7 @@ export default function page() {
               <CldImage
                 className="rounded-2xl shadow-2xl z-2"
                 src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/exp_postfolio_1_ltlxeh.webp"
-                alt="avata"
+                alt="Sorry for your experience. It seems the cloud service has run out."
                 width={100}
                 height={100}
               ></CldImage>
@@ -84,14 +84,14 @@ export default function page() {
             <CldImage
               className="2xl:translate-y-10 rounded-2xl shadowDefault fromTop"
               src="https://res.cloudinary.com/dhjbseski/image/upload/v1771955115/exp_postfolio_1_connuz.jpg"
-              alt="avata"
+              alt="Sorry for your experience. It seems the cloud service has run out."
               width={400}
               height={300}
             ></CldImage>
             <CldImage
               className="2xl:-translate-y-10 z-1 rounded-2xl shadowDefault fromBottom"
               src="https://res.cloudinary.com/dhjbseski/image/upload/v1771955115/exp_postfolio_2_pzkzbu.jpg"
-              alt="avata"
+              alt="Sorry for your experience. It seems the cloud service has run out."
               width={400}
               height={300}
             ></CldImage>
