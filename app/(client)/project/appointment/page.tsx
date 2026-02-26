@@ -62,7 +62,10 @@ export default function page() {
           </div>
           <ul className="space-y-5">
             <li className="flex items-center gap-5">
-              <CircleChevronRight size={30} className="shrink-0 fromRight" />
+              <CircleChevronRight
+                size={30}
+                className="shrink-0 max-md:hidden fromRight"
+              />
               <p className="fromLeft">
                 <span className="font-bold">Role-Based Access Control:</span>{" "}
                 Secure login and authentication system to manage different
@@ -71,7 +74,10 @@ export default function page() {
               </p>
             </li>
             <li className="flex items-center gap-5">
-              <CircleChevronRight size={30} className="shrink-0 fromRight" />
+              <CircleChevronRight
+                size={30}
+                className="shrink-0 max-md:hidden fromRight"
+              />
               <p className="fromLeft">
                 <span className="font-bold">
                   Dynamic Doctor Schedule Management:
@@ -83,21 +89,30 @@ export default function page() {
             </li>
             <li className="flex flex-col justify-center">
               <p className="flex items-center gap-5">
-                <CircleChevronRight size={30} className="shrink-0 fromRight" />{" "}
+                <CircleChevronRight
+                  size={30}
+                  className="shrink-0 max-md:hidden fromRight"
+                />{" "}
                 <span className="font-bold fromLeft">
                   Patient Appointment Booking:
                 </span>
               </p>
               <ul className="pl-10">
                 <li className="flex items-center gap-5">
-                  <CircleDot size={30} className="shrink-0 fromRight" />{" "}
+                  <CircleDot
+                    size={30}
+                    className="shrink-0 max-md:hidden fromRight"
+                  />{" "}
                   <p className="fromLeft">
                     Allows Patients to self-register for appointments based on
                     doctors' available schedules.
                   </p>
                 </li>
                 <li className="flex items-center gap-5">
-                  <CircleDot size={30} className="shrink-0 fromRight" />
+                  <CircleDot
+                    size={30}
+                    className="shrink-0 max-md:hidden fromRight"
+                  />
                   <p className="fromLeft">
                     Empowers Nurses/Coordinators to book appointments on behalf
                     of patients, ensuring flexibility for walk-ins or phone
@@ -107,7 +122,10 @@ export default function page() {
               </ul>
             </li>
             <li className="flex items-center gap-5">
-              <CircleChevronRight size={30} className="shrink-0 fromRight" />
+              <CircleChevronRight
+                size={30}
+                className="shrink-0 max-md:hidden fromRight"
+              />
               <p className="fromLeft">
                 <span className="font-bold">
                   Comprehensive Appointment Management:
@@ -215,6 +233,31 @@ export default function page() {
             timeframe, demonstrating a clear understanding of full-stack
             development, database design, and real-world business process
             automation for the healthcare sector.
+          </p>
+        </div>
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-5 fromTop">
+            <p className="text-[30px] italic">Challenges & Solutions</p>
+            <div className="flex-1 h-1 bg-blueDark2 rounded-2xl"></div>
+          </div>
+          <p className="fromTop">
+            Developing this hospital appointment system during a 2-month
+            internship presented several significant challenges. The most
+            complex was implementing double-booking prevention logic—ensuring no
+            two patients could book the same doctor at the same time required
+            sophisticated validation across doctor schedules, shifts, and
+            existing appointments while handling real-time schedule changes.
+            Building a multi-role system for Patients, Doctors, and Nurses
+            demanded separate navigation flows and permissions within the same
+            React application, secured by JWT authentication ensuring users only
+            accessed authorized data. <br/> Database design proved equally
+            challenging, with 9 interconnected tables (Account, Patient,
+            Employee, Shift, Appointment) needing complex relationships to
+            reflect real hospital workflows while maintaining data integrity. On
+            the frontend, managing real-time state across roles required Context
+            API to reflect appointment status changes instantly without page
+            reloads, alongside dynamic forms where selecting a doctor triggered
+            available time slots validated against backend data.
           </p>
         </div>
       </div>

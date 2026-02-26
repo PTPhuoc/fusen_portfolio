@@ -4,10 +4,12 @@ import { CldImage } from "next-cloudinary";
 import { useEffect } from "react";
 import Link from "next/link";
 import { AnimationDefault } from "@/app/lib/animation";
+import { useRouter } from "next/navigation";
 
 export default function page() {
+  const router = useRouter();
   useEffect(() => {
-    const animationDefault = AnimationDefault()
+    const animationDefault = AnimationDefault();
     return () => animationDefault.disconnect();
   }, []);
 
@@ -21,7 +23,7 @@ export default function page() {
         <div className="relative overflow-hidden rounded-2xl shadowDefault fromBottom">
           <CldImage
             className="absolute object-cover z-1"
-            src="https://res.cloudinary.com/dhjbseski/image/upload/v1772033463/benh_vien_nhi_dong_building_o6ontx.jpg"
+            src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121589/exp_postfolio_2_bntcds.webp"
             alt="avata"
             fill
           ></CldImage>
@@ -29,14 +31,14 @@ export default function page() {
             <div className="flex gap-5 items-center max-md:flex-wrap justify-center">
               <CldImage
                 className="rounded-2xl shadow-2xl z-2"
-                src="https://res.cloudinary.com/dhjbseski/image/upload/v1772033204/benh-vien-nhi-dong-icon_kr2aj4.png"
+                src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/exp_postfolio_1_ltlxeh.webp"
                 alt="avata"
                 width={100}
                 height={100}
               ></CldImage>
               <p className="z-2 font-bold text-white text-[30px]">
                 Children's Hospital 2 (Bệnh viện Nhi Đồng 2)
-              </p>  
+              </p>
             </div>
             <Link
               href={"https://www.benhviennhi.org.vn/"}
@@ -70,7 +72,10 @@ export default function page() {
               future healthcare software systems.
             </p>
             <div className="fromRight">
-              <button className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100">
+              <button
+                onClick={() => router.push("/project/appointment")}
+                className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100"
+              >
                 Detail Project
               </button>
             </div>

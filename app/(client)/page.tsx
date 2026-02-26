@@ -19,7 +19,7 @@ export default function page() {
       <div className="w-[70%] max-xl:w-[80%] min-w-100 pt-10 flex flex-wrap-reverse gap-5 items-center justify-center">
         <CldImage
           className="rounded-2xl shadow-2xl fromRight"
-          src="https://res.cloudinary.com/dhjbseski/image/upload/v1771939695/about_postfolio_ifnyyq.jpg"
+          src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121178/about_postfolio_ropgnr.webp"
           alt="avata"
           width={500}
           height={300}
@@ -103,7 +103,7 @@ export default function page() {
           </div>
           <CldImage
             className="rounded-2xl shadow-2xl fromLeft"
-            src="https://res.cloudinary.com/dhjbseski/image/upload/v1771955115/about_postfolio_pc_g4uv8w.jpg"
+            src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/about_postfolio_pc_oj7p1v.webp"
             alt="avata"
             width={500}
             height={300}
