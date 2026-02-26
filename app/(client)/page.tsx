@@ -16,7 +16,7 @@ export default function page() {
 
   return (
     <div className="w-full pt-25 flex flex-col gap-10 items-center">
-      <div className="w-[70%] max-xl:w-[80%] min-w-100 pt-10 flex flex-wrap-reverse gap-5 items-center justify-center">
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] sm:min-w-100 pt-10 flex flex-wrap-reverse gap-5 items-center justify-center">
         <CldImage
           className="rounded-2xl shadow-2xl fromRight"
           src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121178/about_postfolio_ropgnr.webp"
@@ -24,12 +24,12 @@ export default function page() {
           width={500}
           height={300}
         ></CldImage>
-        <div className="flex flex-col flex-1 min-w-100">
+        <div className="flex flex-col flex-1 sm:min-w-100">
           <p className="text-[80px] max-2xl:text-[60px] fromLeft">
             Hi, I'm Phan Tan Phuoc, a fullstack programmer in Viet Nam, Ho Chi
             Minh city.
           </p>
-          <p className="text-zinc-500 fromLeft">
+          <p className="text-zinc-500 fromLeft sm:min-w-100">
             While I have a solid understanding of Back-End concepts, my primary
             expertise and greatest impact lie in Front-End development.
           </p>

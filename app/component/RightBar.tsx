@@ -10,7 +10,7 @@ export default function RightBar() {
   return (
     <div
       className={
-        "fixed z-5 flex flex-col right-0 gap-1 pt-25 w-1/2 bg-white duration-200 ease-in-out " +
+        "fixed z-10 flex flex-col right-0 gap-1 pt-25 w-1/2 bg-white duration-200 ease-in-out " +
         (rightBar ? "translate-x-0" : "translate-x-full")
       }
     >
