@@ -25,10 +25,10 @@ export default function page() {
           height={300}
         ></CldImage>
         <div className="flex flex-col flex-1 sm:min-w-100">
-          <p className="text-[80px] max-2xl:text-[60px] fromLeft">
+          <h1 className="text-[80px] max-2xl:text-[60px] fromLeft">
             Hi, I'm Phan Tan Phuoc, a fullstack programmer in Viet Nam, Ho Chi
             Minh city.
-          </p>
+          </h1>
           <p className="text-zinc-500 fromLeft sm:min-w-100">
             While I have a solid understanding of Back-End concepts, my primary
             expertise and greatest impact lie in Front-End development.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fusen-portfolio-three.vercel.app/sitemap.xml
