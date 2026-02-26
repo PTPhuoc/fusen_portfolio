@@ -23,7 +23,7 @@ export default function page() {
         <div className="relative overflow-hidden rounded-2xl shadowDefault fromBottom">
           <CldImage
             className="absolute object-cover z-1"
-            src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121589/exp_postfolio_2_bntcds.webp"
+            src="https://res.cloudinary.com/dhjbseski/image/upload/v1772033463/benh_vien_nhi_dong_building_o6ontx.jpg"
             alt="Sorry for your experience. It seems the cloud service has run out."
             fill
           ></CldImage>
@@ -31,7 +31,7 @@ export default function page() {
             <div className="flex gap-5 items-center max-md:flex-wrap justify-center">
               <CldImage
                 className="rounded-2xl shadow-2xl z-2"
-                src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/exp_postfolio_1_ltlxeh.webp"
+                src="https://res.cloudinary.com/dhjbseski/image/upload/v1772033204/benh-vien-nhi-dong-icon_kr2aj4.png"
                 alt="Sorry for your experience. It seems the cloud service has run out."
                 width={100}
                 height={100}
