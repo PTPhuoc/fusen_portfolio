@@ -30,7 +30,7 @@ export default function RightBar() {
           router.push("/experience");
         }}
       >
-        Exprience
+        Experience
       </button>
       <button
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"

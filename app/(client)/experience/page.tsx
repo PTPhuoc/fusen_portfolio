@@ -80,7 +80,7 @@ export default function page() {
               </button>
             </div>
           </div>
-          <div className="flex items-center justify-center gap-5 max-xl:flex-wrap min-w-100">
+          <div className="flex items-center justify-center gap-5 max-xl:flex-wrap min-w-100 max-sm:min-w-80">
             <CldImage
               className="2xl:translate-y-10 rounded-2xl shadowDefault fromTop"
               src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121589/exp_postfolio_2_bntcds.webp"

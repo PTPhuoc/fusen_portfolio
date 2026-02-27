@@ -21,7 +21,7 @@ export default function page() {
         href={"/project/total_job"}
       >
         <div className="absolute -translate-x-full top-0 left-0 w-full h-full bg-blueDark2 duration-300 ease-in-out group-hover:-translate-x-1/5 group-active:translate-x-0"></div>
-        <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white max-w-200 max-2xl:max-w-100">
+        <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white group-active:text-white max-w-200 max-2xl:max-w-100">
           <p className="font-bold">
             DEVELOPING AN ONLINE RECRUITMENT SYSTEM USING MACHINE LEARNING
             APPLICATIONS TO DETECT FRAUDULENT RECRUITMENT
@@ -45,7 +45,7 @@ export default function page() {
         href={"/project/appointment"}
       >
         <div className="absolute -translate-x-full top-0 left-0 w-full h-full bg-blueDark2 duration-300 ease-in-out group-hover:-translate-x-1/5 group-active:translate-x-0"></div>
-        <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white max-w-100">
+        <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white group-active:text-white max-w-100">
           <p className="font-bold">BUILD A WEBSITE FOR APPOINTMENT BOOKING</p>
           <p className="text-start">Internship Project</p>
         </div>

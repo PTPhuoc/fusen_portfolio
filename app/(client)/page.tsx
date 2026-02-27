@@ -224,7 +224,7 @@ export default function page() {
         <div className="flex gap-5 items-center fromTop">
           <button
             className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100"
-            onClick={() => router.push("/exprience")}
+            onClick={() => router.push("/experience")}
           >
             <p className="text-[30px] font-bold">EXPRIENCE</p>
           </button>
