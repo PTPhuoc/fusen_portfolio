@@ -36,11 +36,11 @@ export default function page() {
         </div>
       </div>
       <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
-      <div className="w-[70%] max-xl:w-[80%] min-w-100 flex flex-col p-5 rounded-2xl shadowDefault">
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 max-sm:min-w-90 flex flex-col p-5 rounded-2xl shadowDefault">
         <div className="text-[50px] font-bold fromRight">About Me</div>
         <div className="flex max-2xl:flex-wrap justify-center gap-5">
           <div className="flex flex-1 flex-col justify-between">
-            <p className="flex-1 text-justify max-w fromRight min-w-100 max-md:p-5">
+            <p className="flex-1 text-justify fromRight min-w-100 max-md:p-5 sm:p-3">
               I am a final-year student eagerly anticipating graduation, with a
               strong focus on building dynamic and high-performing web
               applications. My primary expertise lies in TypeScript, crafting
@@ -95,7 +95,7 @@ export default function page() {
         </div>
       </div>
       <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
-      <div className="relative 2xl:overflow-hidden max-2xl:h-100 max-xl:h-120 max-lg:h-130 max-xl:w-[80%] w-[70%] min-w-100 items-center rounded-2xl shadowDefault">
+      <div className="relative 2xl:overflow-hidden max-2xl:h-100 max-sm:min-w-90 max-xl:h-100 max-lg:h-130 w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 items-center rounded-2xl shadowDefault">
         <CldImage
           className="rounded-2xl shadow-2xl fromTop"
           src="https://res.cloudinary.com/dhjbseski/image/upload/v1771987749/HCMUNRE_TruSo_1_h0xhwz.jpg"
@@ -103,7 +103,7 @@ export default function page() {
           width={2000}
           height={200}
         ></CldImage>
-        <div className="absolute w-full top-0 p-5 flex flex-col bg-[rgba(255,255,255,0.3)] gap-5 items-center">
+        <div className="absolute w-full top-0 p-5 flex flex-col bg-[rgba(255,255,255,0.4)] gap-5 items-center">
           <p className="text-[50px] font-bold text-blueDark2 fromTop">
             Education
           </p>
@@ -131,7 +131,7 @@ export default function page() {
         </div>
       </div>
       <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
-      <div className="w-[70%] max-xl:w-[80%] flex flex-col gap-5">
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] flex flex-col gap-5">
         <div className="text-[50px] font-bold text-blueDark2 fromRight">
           Soft Skill
         </div>

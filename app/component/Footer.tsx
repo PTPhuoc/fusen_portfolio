@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="w-[70%] max-2xl:w-[80%] flex flex-col gap-5 py-5">
         <div className="flex items-center">
           <div className="rounded-full border-2 border-white">
-            <p className="text-[40px] font-bold text-white p-20">FUsen</p>
+            <p className="text-[40px] font-bold text-white sm:p-20 max-sm:p-10">FUsen</p>
           </div>
           <div className="flex flex-1 flex-col items-center">
             <p className="font-bold text-white">Menu</p>
