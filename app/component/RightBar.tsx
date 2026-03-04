@@ -7,6 +7,7 @@ export default function RightBar() {
   const router = useRouter();
   const rightBar = useWebState((state) => state.rightBar);
   const toggleRightBar = useWebState((state) => state.toggleRightBar);
+  const setLoading = useWebState(state => state.toggleLoading)
   return (
     <div
       className={
@@ -18,6 +19,7 @@ export default function RightBar() {
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
         onClick={() => {
           toggleRightBar();
+          setLoading(true);
           router.push("/");
         }}
       >
@@ -27,6 +29,7 @@ export default function RightBar() {
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
         onClick={() => {
           toggleRightBar();
+          setLoading(true);
           router.push("/experience");
         }}
       >
@@ -36,6 +39,7 @@ export default function RightBar() {
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
         onClick={() => {
           toggleRightBar();
+          setLoading(true);
           router.push("/project");
         }}
       >
