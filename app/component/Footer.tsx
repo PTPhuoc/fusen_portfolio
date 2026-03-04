@@ -1,6 +1,8 @@
 "use client";
 import { useRouter, usePathname } from "next/navigation";
+import { useWebState } from "../store/WebState";
 export default function Footer() {
+  const setLoading = useWebState((state) => state.toggleLoading);
   const router = useRouter();
   const pathname = usePathname();
   return (
@@ -8,7 +10,9 @@ export default function Footer() {
       <div className="w-[70%] max-2xl:w-[80%] flex flex-col gap-5 py-5">
         <div className="flex items-center">
           <div className="rounded-full border-2 border-white">
-            <p className="text-[40px] font-bold text-white sm:p-20 max-sm:p-10">FUsen</p>
+            <p className="text-[40px] font-bold text-white sm:p-20 max-sm:p-10">
+              FUsen
+            </p>
           </div>
           <div className="flex flex-1 flex-col items-center">
             <p className="font-bold text-white">Menu</p>
@@ -16,7 +20,10 @@ export default function Footer() {
               className={
                 "text-white cursor-pointer" + (pathname === "/" && " underline")
               }
-              onClick={() => router.push("/")}
+              onClick={() => {
+                setLoading(true);
+                router.push("/");
+              }}
             >
               About
             </button>
@@ -25,7 +32,10 @@ export default function Footer() {
                 "text-white cursor-pointer" +
                 (pathname === "/experience" && " underline")
               }
-              onClick={() => router.push("/experience")}
+              onClick={() => {
+                setLoading(true);
+                router.push("/experience");
+              }}
             >
               Exprience
             </button>
@@ -34,7 +44,10 @@ export default function Footer() {
                 "text-white cursor-pointer" +
                 (pathname === "/project" && " underline")
               }
-              onClick={() => router.push("/project")}
+              onClick={() => {
+                setLoading(true);
+                router.push("/project");
+              }}
             >
               Project
             </button>

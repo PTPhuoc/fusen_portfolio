@@ -5,12 +5,22 @@ import { useEffect } from "react";
 import Link from "next/link";
 import { AnimationDefault } from "@/app/lib/animation";
 import { useRouter } from "next/navigation";
+import { useWebState } from "@/app/store/WebState";
 
 export default function page() {
+  const setLoading = useWebState((state) => state.toggleLoading);
   const router = useRouter();
+
   useEffect(() => {
-    const animationDefault = AnimationDefault();
-    return () => animationDefault.disconnect();
+    setLoading(false);
+    let animationDefault: any;
+    const time = setTimeout(() => {
+      animationDefault = AnimationDefault();
+    }, 1000);
+    return () => {
+      clearTimeout(time);
+      if (animationDefault) animationDefault.disconnect();
+    };
   }, []);
 
   return (

@@ -5,20 +5,30 @@ import Link from "next/link";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { AnimationDefault } from "../lib/animation";
+import { useWebState } from "../store/WebState";
 
 export default function page() {
+  const setLoading = useWebState((state) => state.toggleLoading);
   const router = useRouter();
 
   useEffect(() => {
-    const animationDefault = AnimationDefault();
-    return () => animationDefault.disconnect();
+    setLoading(false);
+    let animationDefault: any;
+    const time = setTimeout(() => {
+      animationDefault = AnimationDefault();
+    }, 1000);
+
+    return () => {
+      clearTimeout(time);
+      if (animationDefault) animationDefault.disconnect();
+    };
   }, []);
 
   return (
     <div className="w-full pt-25 flex flex-col gap-10 items-center">
       <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] sm:min-w-100 pt-10 flex flex-wrap-reverse gap-5 items-center justify-center">
         <CldImage
-          className="rounded-2xl shadow-2xl fromRight"
+          className="object-cover rounded-2xl shadow-2xl fromRight"
           src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121178/about_postfolio_ropgnr.webp"
           alt="Sorry for your experience. It seems the cloud service has run out."
           width={500}
@@ -40,23 +50,20 @@ export default function page() {
         <div className="text-[50px] font-bold fromRight">About Me</div>
         <div className="flex max-2xl:flex-wrap justify-center gap-5">
           <div className="flex flex-1 flex-col justify-between">
-            <p className="flex-1 text-justify fromRight min-w-100 max-md:p-5 sm:p-3">
-              I am a final-year student eagerly anticipating graduation, with a
-              strong focus on building dynamic and high-performing web
-              applications. My primary expertise lies in TypeScript, crafting
-              intuitive user interfaces with React.js and Next.js. Beyond just
-              writing code, I deeply care about the user experience and product
-              success. I actively apply SEO best practices and smooth web
-              animations to make applications both discoverable and engaging.
-              While my heart is in the Front-End, my hands-on experience with
-              Python, Django, and RESTful APIs (handling CRUD operations) allows
-              me to seamlessly collaborate with Back-End teams and understand
-              the full system architecture. Equipped with industry-standard
-              tools like Git, Figma, and Postman, I am industry-ready and highly
-              motivated to contribute to a forward-thinking development team.
+            <p className="flex-1 text-justify fromRight">
+              Final-year IT student specializing in building dynamic and
+              high-performing web applications with TypeScript, React.js, and
+              Next.js. I focus on creating intuitive user experiences with SEO
+              best practices and smooth UI interactions. With hands-on
+              experience in Django and RESTful APIs, I understand full-system
+              architecture and collaborate effectively across frontend and
+              backend teams. Passionate about delivering impactful,
+              production-ready solutions.
             </p>
-            <div className="flex gap-10 items-stretch max-md:px-5">
-              <p className="flex items-center fromRight">More Infor:</p>
+            <div className="flex gap-10 max-sm:gap-5 items-stretch">
+              <p className="flex items-center font-bold fromRight ">
+                More Infor:
+              </p>
               <Link
                 className="w-20 h-20 fill-blue-500 cursor-pointer fromRight"
                 href={"https://www.facebook.com/phan.tan.phuoc.883243/"}
@@ -89,10 +96,14 @@ export default function page() {
             className="rounded-2xl shadow-2xl fromLeft"
             src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/about_postfolio_pc_oj7p1v.webp"
             alt="Sorry for your experience. It seems the cloud service has run out."
-            width={500}
+            width={600}
             height={300}
           ></CldImage>
         </div>
+      </div>
+      <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] ">
+        <p className="text-[50px] font-bold text-blueDark2 fromRight">Skill</p>
       </div>
       <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
       <div className="relative 2xl:overflow-hidden max-2xl:h-100 max-sm:min-w-90 max-xl:h-100 max-lg:h-130 w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 items-center rounded-2xl shadowDefault">
@@ -132,12 +143,12 @@ export default function page() {
       </div>
       <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
       <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] flex flex-col gap-5">
-        <div className="text-[50px] font-bold text-blueDark2 fromRight">
+        <p className="text-[50px] font-bold text-blueDark2 fromRight">
           Soft Skill
-        </div>
+        </p>
         <div className="flex max-2xl:flex-wrap gap-5 items-stretch">
           <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
-            <div className="flex items-center self-start bg-[#0C6478] rounded-full">
+            <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
                   className="w-14 h-14 fill-blueDark1"
@@ -156,7 +167,7 @@ export default function page() {
             </p>
           </div>
           <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
-            <div className="flex items-center self-start bg-[#0C6478] rounded-full">
+            <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
                   className="w-14 h-14 fill-blueDark1"
@@ -177,7 +188,7 @@ export default function page() {
         </div>
         <div className="flex max-2xl:flex-wrap gap-5 items-stretch">
           <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
-            <div className="flex items-center self-start bg-[#0C6478] rounded-full">
+            <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 shrink-0 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
                   className="w-14 h-14 fill-blueDark1"
@@ -196,7 +207,7 @@ export default function page() {
             </p>
           </div>
           <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
-            <div className="flex items-center self-start bg-[#0C6478] rounded-full">
+            <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 shrink-0 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
                   className="w-14 h-14 fill-blueDark1"
@@ -224,13 +235,19 @@ export default function page() {
         <div className="flex gap-5 items-center fromTop">
           <button
             className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100"
-            onClick={() => router.push("/experience")}
+            onClick={() => {
+              setLoading(true);
+              router.push("/experience");
+            }}
           >
             <p className="text-[30px] font-bold">EXPRIENCE</p>
           </button>
           <button
             className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100"
-            onClick={() => router.push("/project")}
+            onClick={() => {
+              setLoading(true);
+              router.push("/project");
+            }}
           >
             <p className="text-[30px] font-bold">PROJECT</p>
           </button>

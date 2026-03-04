@@ -3,11 +3,20 @@
 import { useEffect } from "react";
 import { AnimationDefault } from "@/app/lib/animation";
 import Link from "next/link";
+import { useWebState } from "@/app/store/WebState";
 export default function page() {
-  
+  const setLoading = useWebState((state) => state.toggleLoading);
+
   useEffect(() => {
-    const animationDefault = AnimationDefault();
-    return () => animationDefault.disconnect();
+    setLoading(false);
+    let animationDefault: any;
+    const time = setTimeout(() => {
+      animationDefault = AnimationDefault();
+    }, 1000);
+    return () => {
+      clearTimeout(time);
+      if (animationDefault) animationDefault.disconnect();
+    };
   }, []);
 
   return (
@@ -19,6 +28,7 @@ export default function page() {
       <Link
         className="group relative overflow-hidden w-[70%] max-2xl:w-[80%] max-md:w-[95%] flex items-center justify-between p-5 rounded-2xl shadowDefault fromTop"
         href={"/project/total_job"}
+        onClick={() => setLoading(true)}
       >
         <div className="absolute -translate-x-full top-0 left-0 w-full h-full bg-blueDark2 duration-300 ease-in-out group-hover:-translate-x-1/5 group-active:translate-x-0"></div>
         <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white group-active:text-white max-w-200 max-2xl:max-w-100">
@@ -43,6 +53,7 @@ export default function page() {
       <Link
         className="group relative overflow-hidden w-[70%] max-2xl:w-[80%] max-md:w-[95%] flex items-center justify-between p-5 rounded-2xl shadowDefault fromTop"
         href={"/project/appointment"}
+        onClick={() => setLoading(true)}
       >
         <div className="absolute -translate-x-full top-0 left-0 w-full h-full bg-blueDark2 duration-300 ease-in-out group-hover:-translate-x-1/5 group-active:translate-x-0"></div>
         <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white group-active:text-white max-w-100">

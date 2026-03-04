@@ -57,32 +57,65 @@ body {
 .fromRight {
   opacity: 0;
   transform: translateX(-100px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
   transition-delay: var(--delay);
 }
 
 .fromLeft {
   opacity: 0;
   transform: translateX(100px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
   transition-delay: var(--delay);
 }
 
 .fromTop {
   opacity: 0;
   transform: translateY(100px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
   transition-delay: var(--delay);
 }
 
 .fromBottom {
   opacity: 0;
   transform: translateY(-100px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
   transition-delay: var(--delay);
 }
 
 .active {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 0, 1) 0%,
+    rgba(183, 255, 0, 1) 25%,
+    rgba(0, 255, 136, 1) 50%,
+    rgba(117, 203, 253, 1) 75%,
+    rgba(136, 0, 255, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradient-move 2s linear infinite;
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
 }

@@ -5,13 +5,23 @@ import { useEffect, useState } from "react";
 import { CldImage } from "next-cloudinary";
 import { CircleChevronRight, CircleDot } from "lucide-react";
 import Link from "next/link";
+import { useWebState } from "@/app/store/WebState";
 
 export default function page() {
   const [expandImage, setExpandImage] = useState(false);
-  useEffect(() => {
-    const animationDefault = AnimationDefault();
-    return () => animationDefault.disconnect();
-  }, []);
+  const setLoading = useWebState((state) => state.toggleLoading);
+  
+    useEffect(() => {
+      setLoading(false);
+      let animationDefault: any;
+      const time = setTimeout(() => {
+        animationDefault = AnimationDefault();
+      }, 1000);
+      return () => {
+        clearTimeout(time);
+        if (animationDefault) animationDefault.disconnect();
+      };
+    }, []);
 
   return (
     <div className="w-full pt-25 flex flex-col gap-10 items-center">

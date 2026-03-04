@@ -5,6 +5,7 @@ import { useWebState } from "../store/WebState";
 
 export default function BarClient() {
   const toggleRightBar = useWebState((state) => state.toggleRightBar);
+  const setLoading = useWebState((state) => state.toggleLoading);
   const rightBar = useWebState((state) => state.rightBar);
   const router = useRouter();
   const pathname = usePathname();
@@ -15,7 +16,10 @@ export default function BarClient() {
           <button
             disabled={pathname === "/"}
             className="font-bold text-[40px] text-blueNormal cursor-pointer"
-            onClick={() => router.push("/")}
+            onClick={() => {
+              setLoading(true);
+              router.push("/");
+            }}
           >
             FUsen
           </button>
@@ -24,21 +28,30 @@ export default function BarClient() {
           <button
             disabled={pathname === "/"}
             className="cursor-pointer"
-            onClick={() => router.push("/")}
+            onClick={() => {
+              setLoading(true);
+              router.push("/");
+            }}
           >
             About
           </button>
           <button
             disabled={pathname === "/experience"}
             className="cursor-pointer"
-            onClick={() => router.push("/experience")}
+            onClick={() => {
+              setLoading(true);
+              router.push("/experience");
+            }}
           >
             Experience
           </button>
           <button
             disabled={pathname === "/project"}
             className="cursor-pointer"
-            onClick={() => router.push("/project")}
+            onClick={() => {
+              setLoading(true);
+              router.push("/project");
+            }}
           >
             Project
           </button>
