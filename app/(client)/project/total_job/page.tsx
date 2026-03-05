@@ -10,18 +10,18 @@ import { useWebState } from "@/app/store/WebState";
 export default function page() {
   const [expandImage, setExpandImage] = useState(false);
   const setLoading = useWebState((state) => state.toggleLoading);
-  
-    useEffect(() => {
-      setLoading(false);
-      let animationDefault: any;
-      const time = setTimeout(() => {
-        animationDefault = AnimationDefault();
-      }, 1000);
-      return () => {
-        clearTimeout(time);
-        if (animationDefault) animationDefault.disconnect();
-      };
-    }, []);
+
+  useEffect(() => {
+    setLoading(false);
+    let animationDefault: any;
+    const time = setTimeout(() => {
+      animationDefault = AnimationDefault();
+    }, 1000);
+    return () => {
+      clearTimeout(time);
+      if (animationDefault) animationDefault.disconnect();
+    };
+  }, []);
 
   return (
     <div className="w-full pt-25 flex flex-col gap-10 items-center">
@@ -70,7 +70,7 @@ export default function page() {
             <p className="text-[30px] italic">Key Features & Business Logic</p>
             <div className="flex-1 h-1 bg-blueDark2 rounded-2xl"></div>
           </div>
-          <p>
+          <p className="fromTop">
             A complete job recruitment platform with Next.js frontend and Django
             backend (SQL Server), serving Job Seekers, Employers, and
             Administrators.

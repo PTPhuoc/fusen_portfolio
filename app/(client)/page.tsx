@@ -45,7 +45,7 @@ export default function page() {
           </p>
         </div>
       </div>
-      <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] h-1 bg-blueDark2 rounded-2xl fromTop"></div>
       <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 max-sm:min-w-90 flex flex-col p-5 rounded-2xl shadowDefault">
         <div className="text-[50px] font-bold fromRight">About Me</div>
         <div className="flex max-2xl:flex-wrap justify-center gap-5">
@@ -61,7 +61,7 @@ export default function page() {
               production-ready solutions.
             </p>
             <div className="flex gap-10 max-sm:gap-5 items-stretch">
-              <p className="flex items-center font-bold fromRight ">
+              <p className="px-5 h-20 flex items-center font-bold bg-zinc-400 text-white rounded-xl fromRight ">
                 More Infor:
               </p>
               <Link
@@ -101,11 +101,124 @@ export default function page() {
           ></CldImage>
         </div>
       </div>
-      <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
-      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] ">
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] h-1 bg-blueDark2 rounded-2xl fromTop"></div>
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] flex flex-col">
         <p className="text-[50px] font-bold text-blueDark2 fromRight">Skill</p>
+        <div className="flex gap-5 justify-center flex-wrap">
+          <div className="flex-1 gap-5 flex sm:min-w-100 min-w-90 ">
+            <div className="flex-1 gap-3 flex flex-col items-stretch">
+              <p className="py-5 text-center text-white font-bold rounded-xl bg-[#0C6478] fromBottom">
+                Language
+              </p>
+              <div className="flex gap-3 flex-col overflow-auto no-scroll max-h-50 fromTop">
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  JavaScript
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  TypeScript
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Python
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  HTML/CSS
+                </p>
+              </div>
+            </div>
+            <div className="flex-1 gap-3 flex flex-col items-stretch">
+              <p className="py-5 text-center text-white font-bold rounded-xl bg-[#0C6478] fromBottom">
+                FrontEnd
+              </p>
+              <div className="flex gap-3 flex-col overflow-auto no-scroll max-h-50 fromTop">
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  ReactJS
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  NextJS
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 gap-5 flex sm:min-w-100 min-w-90">
+            <div className="flex-1 gap-3 flex flex-col items-stretch">
+              <p className="py-5 text-center text-white font-bold rounded-xl bg-[#0C6478] fromBottom">
+                BackEnd
+              </p>
+              <div className="flex gap-3 flex-col overflow-auto no-scroll max-h-50 fromTop">
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  ExpressJS
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Django
+                </p>
+              </div>
+            </div>
+            <div className="flex-1 gap-3 flex flex-col items-stretch">
+              <p className="py-5 text-center text-white font-bold rounded-xl bg-[#0C6478] fromBottom">
+                Other
+              </p>
+              <div className="flex gap-3 flex-col overflow-auto no-scroll max-h-50 fromTop">
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Tailwind CSS
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Redux
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Zustand
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Axios
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Bcrypt
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  JWT
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Websocket
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 gap-5 flex sm:min-w-100 min-w-90">
+            <div className="flex-1 gap-3 flex flex-col items-stretch">
+              <p className="py-5 text-center text-white font-bold rounded-xl bg-[#0C6478] fromBottom">
+                Tool
+              </p>
+              <div className="flex gap-3 flex-col overflow-auto no-scroll max-h-50 fromTop">
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Git/Github
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Figma
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  Jira
+                </p>
+              </div>
+            </div>
+            <div className="flex-1 gap-3 flex flex-col items-stretch">
+              <p className="py-5 text-center text-white font-bold rounded-xl bg-[#0C6478] fromBottom">
+                Database
+              </p>
+              <div className="flex gap-3 flex-col overflow-auto no-scroll max-h-50 fromTop">
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  SQL Server
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  PostGreSQL
+                </p>
+                <p className="py-3 text-center text-[#0C6478] font-bold rounded-xl bg-zinc-200">
+                  MongoDB
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] h-1 bg-blueDark2 rounded-2xl fromTop"></div>
       <div className="relative 2xl:overflow-hidden max-2xl:h-100 max-sm:min-w-90 max-xl:h-100 max-lg:h-130 w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 items-center rounded-2xl shadowDefault">
         <CldImage
           className="rounded-2xl shadow-2xl fromTop"
@@ -141,7 +254,7 @@ export default function page() {
           </p>
         </div>
       </div>
-      <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] h-1 bg-blueDark2 rounded-2xl fromTop"></div>
       <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] flex flex-col gap-5">
         <p className="text-[50px] font-bold text-blueDark2 fromRight">
           Soft Skill
@@ -227,7 +340,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="w-[70%] h-1 bg-blueDark2 rounded-2xl"></div>
+      <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] h-1 bg-blueDark2 rounded-2xl fromTop"></div>
       <div className="w-[70%] max-2xl:w-[80%] flex flex-col gap-5">
         <div className="text-[50px] font-bold text-blueDark2 fromRight">
           See More

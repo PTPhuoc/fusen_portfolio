@@ -27,10 +27,10 @@ export default function Loading() {
 
   return (
     <div
-      className={`fixed w-full h-screen flex justify-center items-center bg-white ${isClose ? "-z-1 hidden" : "z-50"} duration-1000 ease-out`}
+      className={`fixed w-full h-screen flex justify-center items-center bg-white ${isClose ? "-z-1 opacity-0" : "z-60 opacity-100"} duration-1000 ease-out`}
     >
       <div
-        className={`flex ${circleIn ? "w-50 h-50 rounded-full" : "w-full h-full rounded-none"} items-center justify-center bg-zinc-200 duration-500 ease-out`}
+        className={`flex ${circleIn ? "w-50 h-50 rounded-full bg-zinc-200" : "w-full h-full rounded-none bg-zinc-50"} items-center justify-center duration-500 ease-out`}
       >
         <div
           className={`${circleIn ? "opacity-100" : "opacity-0"} duration-500 ease-in`}
