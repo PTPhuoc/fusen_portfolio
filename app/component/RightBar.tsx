@@ -1,13 +1,14 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useWebState } from "../store/WebState";
 
 export default function RightBar() {
   const router = useRouter();
   const rightBar = useWebState((state) => state.rightBar);
+  const pathname = usePathname();
   const toggleRightBar = useWebState((state) => state.toggleRightBar);
-  const setLoading = useWebState(state => state.toggleLoading)
+  const setLoading = useWebState((state) => state.toggleLoading);
   return (
     <div
       className={
@@ -19,8 +20,10 @@ export default function RightBar() {
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
         onClick={() => {
           toggleRightBar();
-          setLoading(true);
-          router.push("/");
+          if (pathname !== "/") {
+            setLoading(true);
+            router.push("/");
+          }
         }}
       >
         About
@@ -29,8 +32,10 @@ export default function RightBar() {
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
         onClick={() => {
           toggleRightBar();
-          setLoading(true);
-          router.push("/experience");
+          if (pathname !== "/experience") {
+            setLoading(true);
+            router.push("/experience");
+          }
         }}
       >
         Experience
@@ -39,8 +44,10 @@ export default function RightBar() {
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
         onClick={() => {
           toggleRightBar();
-          setLoading(true);
-          router.push("/project");
+          if (pathname !== "/project") {
+            setLoading(true);
+            router.push("/project");
+          }
         }}
       >
         Project
