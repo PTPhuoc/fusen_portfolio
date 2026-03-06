@@ -83,7 +83,10 @@ export default function page() {
             </p>
             <div className="fromRight">
               <button
-                onClick={() => router.push("/project/appointment")}
+                onClick={() => {
+                  setLoading(true);
+                  router.push("/project/appointment");
+                }}
                 className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100"
               >
                 Detail Project
