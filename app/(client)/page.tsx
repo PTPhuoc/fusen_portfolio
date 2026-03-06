@@ -220,15 +220,16 @@ export default function page() {
         </div>
       </div>
       <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] h-1 bg-blueDark2 rounded-2xl fromTop"></div>
-      <div className="relative 2xl:overflow-hidden max-2xl:h-100 max-sm:min-w-90 max-xl:h-100 max-lg:h-130 w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 items-center rounded-2xl shadowDefault">
-        <CldImage
-          className="rounded-2xl shadow-2xl fromTop"
-          src="https://res.cloudinary.com/dhjbseski/image/upload/v1771987749/HCMUNRE_TruSo_1_h0xhwz.jpg"
-          alt="Sorry for your experience. It seems the cloud service has run out."
-          width={2000}
-          height={200}
-        ></CldImage>
-        <div className="absolute w-full top-0 p-5 flex flex-col bg-[rgba(255,255,255,0.4)] gap-5 items-center">
+      <div className="relative 2xl:overflow-hidden h-130 max-sm:h-140 max-sm:min-w-90 w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 items-center rounded-2xl shadowDefault">
+        <div className="w-full h-50">
+          <CldImage
+            className="absolute object-cover rounded-2xl shadow-2xl fromTop"
+            src="https://res.cloudinary.com/dhjbseski/image/upload/v1771987749/HCMUNRE_TruSo_1_h0xhwz.jpg"
+            alt="Sorry for your experience. It seems the cloud service has run out."
+            fill
+          ></CldImage>
+        </div>
+        <div className="absolute w-full h-full top-0 p-5 flex flex-col bg-[rgba(166,166,166,0.4)] gap-5 items-center">
           <p className="text-[50px] font-bold text-blueDark2 fromTop">
             {TextAbout[language].education.name}
           </p>
@@ -244,13 +245,13 @@ export default function page() {
               {TextAbout[language].education.schoolName}
             </p>
           </div>
-          <p className="w-full font-bold text-white fromRight max-2xl:text-black">
+          <p className="w-full font-bold text-white fromRight">
             2021 - 2025
           </p>
-          <p className="w-full text-white fromRight max-2xl:text-black">
+          <p className="w-full text-white fromRight">
             {TextAbout[language].education.major}
           </p>
-          <p className="w-full text-white fromRight max-2xl:text-black">
+          <p className="w-full text-white fromRight">
             GPA: 3.1/4
           </p>
         </div>
@@ -261,7 +262,7 @@ export default function page() {
           {TextAbout[language].softSkill.name}
         </p>
         <div className="flex max-2xl:flex-wrap gap-5 items-stretch">
-          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
+          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop min-w-100 max-sm:min-w-90">
             <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
@@ -278,7 +279,7 @@ export default function page() {
             </div>
             <p>{TextAbout[language].softSkill.teamWork.content}</p>
           </div>
-          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
+          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop min-w-100 max-sm:min-w-90">
             <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
@@ -297,7 +298,7 @@ export default function page() {
           </div>
         </div>
         <div className="flex max-2xl:flex-wrap gap-5 items-stretch">
-          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
+          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop min-w-100 max-sm:min-w-90">
             <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 shrink-0 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
@@ -314,7 +315,7 @@ export default function page() {
             </div>
             <p>{TextAbout[language].softSkill.DFA.content}</p>
           </div>
-          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop md:min-w-100">
+          <div className="flex flex-1 flex-col gap-5 p-5 shadowDefault rounded-2xl fromTop min-w-100 max-sm:min-w-90">
             <div className="flex items-center bg-[#0C6478] rounded-full">
               <div className="w-20 h-20 shrink-0 bg-[#CFF3FF] flex justify-center items-center rounded-full">
                 <svg
@@ -338,7 +339,7 @@ export default function page() {
         <div className="text-[50px] font-bold text-blueDark2 fromRight">
           {TextAbout[language].seeMore}
         </div>
-        <div className="flex gap-5 items-center fromTop">
+        <div className="flex gap-5 items-stretch fromTop">
           <button
             className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100"
             onClick={() => {
