@@ -220,7 +220,7 @@ export default function page() {
         </div>
       </div>
       <div className="w-[70%] max-xl:w-[80%] max-md:w-[95%] h-1 bg-blueDark2 rounded-2xl fromTop"></div>
-      <div className="relative 2xl:overflow-hidden h-130 max-sm:h-140 max-sm:min-w-90 w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 items-center rounded-2xl shadowDefault">
+      <div className="relative overflow-hidden h-130 max-sm:min-w-90 w-[70%] max-xl:w-[80%] max-md:w-[95%] min-w-100 items-center rounded-2xl shadowDefault">
         <div className="w-full h-50">
           <CldImage
             className="absolute object-cover rounded-2xl shadow-2xl fromTop"
@@ -229,7 +229,7 @@ export default function page() {
             fill
           ></CldImage>
         </div>
-        <div className="absolute w-full h-full top-0 p-5 flex flex-col bg-[rgba(166,166,166,0.4)] gap-5 items-center">
+        <div className="absolute w-full h-full top-0 p-5 max-sm:p-2 flex flex-col bg-[rgba(166,166,166,0.4)] gap-5 items-center">
           <p className="text-[50px] font-bold text-blueDark2 fromTop">
             {TextAbout[language].education.name}
           </p>
