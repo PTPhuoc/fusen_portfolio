@@ -6,9 +6,13 @@ import Link from "next/link";
 import { AnimationDefault } from "@/app/lib/animation";
 import { useRouter } from "next/navigation";
 import { useWebState } from "@/app/store/WebState";
+import { useLanguage } from "@/app/store/LanguageState";
+import { TextExp } from "@/app/lib/Language";
+import { CircleChevronRight } from "lucide-react";
 
 export default function page() {
   const setLoading = useWebState((state) => state.toggleLoading);
+  const language = useLanguage((state) => state.language);
   const router = useRouter();
 
   useEffect(() => {
@@ -47,7 +51,7 @@ export default function page() {
                 height={100}
               ></CldImage>
               <p className="z-2 font-bold text-white text-[30px]">
-                Children's Hospital 2 (Bệnh viện Nhi Đồng 2)
+                {TextExp[language].nameCompany}
               </p>
             </div>
             <Link
@@ -68,19 +72,36 @@ export default function page() {
         <div className="flex flex-col gap-5 justify-center p-5">
           <div className="flex flex-col gap-3 max-md:max-w-100">
             <p className="font-bold bg-blueDark2 px-2 rounded-md text-white fromRight">
-              Internship
+              {TextExp[language].period}
             </p>
-            <p className="fromRight">Position: Full-Stack</p>
-            <p className="fromRight">
-              Re-engineered and implemented the registration web interface under
-              mentorship, ensuring it met the practical, fast-paced needs of
-              hospital operations.
-            </p>
-            <p className="fromRight">
-              Actively participated in technical seminars and project meetings
-              to analyze business requirements and understand the workflow for
-              future healthcare software systems.
-            </p>
+            <p className="fromRight">{TextExp[language].role}</p>
+            <div className="flex items-center gap-3">
+              <CircleChevronRight
+                size={30}
+                className="shrink-0 max-md:hidden fromRight"
+              />
+              <p className="text-justify fromRight">
+                {TextExp[language].content[1]}
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <CircleChevronRight
+                size={30}
+                className="shrink-0 max-md:hidden fromRight"
+              />
+              <p className="text-justify fromRight">
+                {TextExp[language].content[2]}
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <CircleChevronRight
+                size={30}
+                className="shrink-0 max-md:hidden fromRight"
+              />
+              <p className="text-justify fromRight">
+                {TextExp[language].content[3]}
+              </p>
+            </div>
             <div className="fromRight">
               <button
                 onClick={() => {
@@ -89,25 +110,27 @@ export default function page() {
                 }}
                 className="flex flex-1 p-5 justify-center items-center bg-[#73DEFF] text-blueDark2 rounded-2xl scale-100 duration-200 ease-in-out hover:bg-[#007DA3] hover:text-white hover:scale-105 hover:shadow-2xl active:scale-100"
               >
-                Detail Project
+                {TextExp[language].seeDetail}
               </button>
             </div>
           </div>
           <div className="flex items-center justify-center gap-5 max-xl:flex-wrap min-w-100 max-sm:min-w-80">
-            <CldImage
-              className="2xl:translate-y-10 rounded-2xl shadowDefault fromTop"
-              src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121589/exp_postfolio_2_bntcds.webp"
-              alt="Sorry for your experience. It seems the cloud service has run out."
-              width={400}
-              height={300}
-            ></CldImage>
-            <CldImage
-              className="2xl:-translate-y-10 z-1 rounded-2xl shadowDefault fromBottom"
-              src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/exp_postfolio_1_ltlxeh.webp"
-              alt="Sorry for your experience. It seems the cloud service has run out."
-              width={400}
-              height={300}
-            ></CldImage>
+            <div className="relative w-100 h-150 max-lg:w-full">
+              <CldImage
+                className="absolute object-cover 2xl:translate-y-10 rounded-2xl shadowDefault fromTop"
+                src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121589/exp_postfolio_2_bntcds.webp"
+                alt="Sorry for your experience. It seems the cloud service has run out."
+                fill
+              ></CldImage>
+            </div>
+            <div className="relative w-100 h-150 max-lg:w-full">
+              <CldImage
+                className="absolute object-cover 2xl:-translate-y-10 z-1 rounded-2xl shadowDefault fromBottom"
+                src="https://res.cloudinary.com/dhjbseski/image/upload/v1772121587/exp_postfolio_1_ltlxeh.webp"
+                alt="Sorry for your experience. It seems the cloud service has run out."
+                fill
+              ></CldImage>
+            </div>
           </div>
         </div>
       </div>

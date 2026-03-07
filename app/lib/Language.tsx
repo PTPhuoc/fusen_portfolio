@@ -110,3 +110,28 @@ export const TextAbout = {
     seeMore: "See More"
   },
 };
+
+export const TextExp = {
+    vie: {
+      nameCompany: "Bệnh Viện Nhi Đồng 2",
+      period: "Thực tập sinh",
+      role: "Vai trò: Full-Stack Developer",
+      content: {
+        1: "Tham gia tái thiết kế và triển khai giao diện web đăng ký khám bệnh dưới sự hướng dẫn của mentor, đảm bảo giao diện phù hợp với quy trình làm việc nhanh và thực tế của nhân viên bệnh viện.",
+        2: "Phối hợp với nhóm phát triển để tìm hiểu yêu cầu hệ thống và cải thiện phần mềm nội bộ trong lĩnh vực y tế.",
+        3: "Tham gia các seminar kỹ thuật, họp dự án và phân tích yêu cầu, từ đó hiểu rõ hơn về quy trình vận hành và phát triển phần mềm trong hệ thống y tế."
+      },
+      seeDetail: "Chi tiết dự án"
+    },
+    eng: {
+      nameCompany: "Children's Hospital 2",
+      period: "Internship",
+      role: "Position: Full-Stack Developer",
+      content: {
+        1: "Re-engineered and implemented the patient registration web interface under mentorship, improving usability and aligning the system with the fast-paced operational workflow of hospital staff.",
+        2: "Collaborated with the development team to understand system requirements and support the improvement of internal healthcare software systems.",
+        3: "Participated in technical seminars, project discussions, and requirement analysis meetings to gain insight into healthcare system workflows and software development processes."
+      },
+      seeDetail: "Detail Project"
+    }
+}
