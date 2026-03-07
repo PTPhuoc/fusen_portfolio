@@ -13,12 +13,14 @@ export default function RightBar() {
   const pathname = usePathname();
   const toggleRightBar = useWebState((state) => state.toggleRightBar);
   const setLoading = useWebState((state) => state.toggleLoading);
+
   return (
     <div
       className={
         "fixed z-10 flex flex-col right-0 gap-1 pt-25 w-1/2 bg-white duration-200 ease-in-out " +
         (rightBar ? "translate-x-0" : "translate-x-full")
       }
+      onClick={(e) => e.stopPropagation()}
     >
       <button
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
@@ -30,7 +32,7 @@ export default function RightBar() {
           }
         }}
       >
-        About
+        {TextBar[language].about}
       </button>
       <button
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
@@ -42,7 +44,7 @@ export default function RightBar() {
           }
         }}
       >
-        Experience
+        {TextBar[language].experience}
       </button>
       <button
         className="text-white cursor-pointer p-5 bg-blueDark2 border-2 border-blueDark2 duration-200 ease-in hover:bg-white hover:text-blueDark2"
@@ -54,7 +56,7 @@ export default function RightBar() {
           }
         }}
       >
-        Project
+        {TextBar[language].project}
       </button>
       <div className="flex items-center justify-between p-1 bg-zinc-400">
         <svg

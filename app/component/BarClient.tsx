@@ -14,7 +14,10 @@ export default function BarClient() {
   const router = useRouter();
   const pathname = usePathname();
   return (
-    <div className="fixed z-50 w-full h-25 bg-white flex justify-center items-center shadowDefault">
+    <div
+      className="fixed z-50 w-full h-25 bg-white flex justify-center items-center shadowDefault"
+      
+    >
       <div className="w-[70%] max-2xl:w-[80%] flex justify-between items-center">
         <div>
           <button
@@ -22,6 +25,7 @@ export default function BarClient() {
             className="font-bold text-[40px] text-blueNormal cursor-pointer"
             onClick={() => {
               setLoading(true);
+              rightBar && toggleRightBar()
               router.push("/");
             }}
           >
@@ -70,7 +74,7 @@ export default function BarClient() {
             <button
               className={`py-1 ${language === "vie" ? "bg-blueNormal" : "bg-zinc-500"} rounded-md text-[20px] w-10 text-center text-white font-bold cursor-pointer duration-200 ease-in hover:text-blueNormal hover:bg-white active:bg-blueNormal active:text-white`}
               onClick={() => {
-                language !== "vie" && setLang("vie")
+                language !== "vie" && setLang("vie");
               }}
             >
               Vie
@@ -78,7 +82,7 @@ export default function BarClient() {
             <button
               className={`py-1 ${language === "eng" ? "bg-blueNormal" : "bg-zinc-500"} rounded-md text-[20px] w-10 text-center text-white font-bold cursor-pointer duration-200 ease-in hover:text-blueNormal hover:bg-white active:bg-blueNormal active:text-white`}
               onClick={() => {
-                language !== "eng" && setLang("eng")
+                language !== "eng" && setLang("eng");
               }}
             >
               Eng
@@ -87,7 +91,7 @@ export default function BarClient() {
         </div>
         <button
           className="w-15 h-15 flex justify-center items-center rounded-full cursor-pointer sm:hidden bg-white duration-200 ease-in hover:bg-zinc-400 hover:fill-white"
-          onClick={toggleRightBar}
+          onClick={() => toggleRightBar()}
         >
           {rightBar ? (
             <svg
