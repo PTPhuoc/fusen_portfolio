@@ -4,8 +4,11 @@ import { useEffect } from "react";
 import { AnimationDefault } from "@/app/lib/animation";
 import Link from "next/link";
 import { useWebState } from "@/app/store/WebState";
+import { useLanguage } from "@/app/store/LanguageState";
+import { TextProject } from "@/app/lib/Language";
 export default function page() {
   const setLoading = useWebState((state) => state.toggleLoading);
+  const language = useLanguage(state => state.language)
 
   useEffect(() => {
     setLoading(false);
@@ -33,10 +36,9 @@ export default function page() {
         <div className="absolute -translate-x-full top-0 left-0 w-full h-full bg-blueDark2 duration-300 ease-in-out group-hover:-translate-x-1/5 group-active:translate-x-0"></div>
         <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white group-active:text-white max-w-200 max-2xl:max-w-100">
           <p className="font-bold">
-            DEVELOPING AN ONLINE RECRUITMENT SYSTEM USING MACHINE LEARNING
-            APPLICATIONS TO DETECT FRAUDULENT RECRUITMENT
+            {TextProject[language].first.name}
           </p>
-          <p className="text-start">Graduation Project</p>
+          <p className="text-start">{TextProject[language].first.period}</p>
         </div>
         <svg
           className="w-20 h-20 shrink-0 z-1 fill-blueDark2 group-active:fill-white"
@@ -57,8 +59,8 @@ export default function page() {
       >
         <div className="absolute -translate-x-full top-0 left-0 w-full h-full bg-blueDark2 duration-300 ease-in-out group-hover:-translate-x-1/5 group-active:translate-x-0"></div>
         <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white group-active:text-white max-w-100">
-          <p className="font-bold">BUILD A WEBSITE FOR APPOINTMENT BOOKING</p>
-          <p className="text-start">Internship Project</p>
+          <p className="font-bold">{TextProject[language].second.name}</p>
+          <p className="text-start">{TextProject[language].second.name}</p>
         </div>
         <svg
           className="w-20 h-20 z-1 fill-blueDark2 shrink-0 group-active:fill-white"
