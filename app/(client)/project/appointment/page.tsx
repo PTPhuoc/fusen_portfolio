@@ -38,15 +38,15 @@ export default function page() {
               {TextFirstPj[language].name}
             </p>
           </div>
-          <div className="flex gap-10 shrink-0">
-            <div className="flex flex-col">
+          <div className="flex gap-10 max-sm:gap-5 max-sm:flex-wrap xl:shrink-0">
+            <div className="flex flex-col max-sm:min-w-40">
               <p className="text-[30px] font-bold text-justify fromLeft">
                 {TextFirstPj[language].role.name}
               </p>
               <p className="fromLeft">{TextFirstPj[language].role.content}</p>
             </div>
-            <div className="flex flex-col">
-              <p className="text-[30px] font-bold  fromLeft">
+            <div className="flex flex-col max-sm:min-w-40">
+              <p className="text-[30px] font-bold fromLeft">
                 {TextFirstPj[language].time.name}
               </p>
               <p className="fromLeft text-justify">{TextFirstPj[language].time.content}</p>

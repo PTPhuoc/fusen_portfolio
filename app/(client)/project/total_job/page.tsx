@@ -29,7 +29,7 @@ export default function page() {
   return (
     <div className="w-full pt-25 flex flex-col gap-10 items-center">
       <div className="w-[70%] max-2xl:w-[80%] max-md:w-[95%] flex flex-col gap-5 pt-10">
-        <div className="flex justify-between max-md:flex-wrap">
+        <div className="flex gap-5 justify-between max-lg:flex-wrap">
           <div className="flex flex-col">
             <p className="text-[30px] fromRight">
               {TextSecondPj[language].period}
@@ -38,15 +38,15 @@ export default function page() {
               {TextSecondPj[language].name}
             </p>
           </div>
-          <div className="flex gap-10 shrink-0">
-            <div className="flex flex-col">
+          <div className="flex gap-10 max-sm:gap-5 max-sm:flex-wrap xl:shrink-0">
+            <div className="flex flex-col max-sm:min-w-40">
               <p className="text-[30px] font-bold fromLeft">
                 {TextSecondPj[language].role.name}
               </p>
               <p className="fromLeft">{TextSecondPj[language].role.content}</p>
             </div>
-            <div className="flex flex-col">
-              <p className="text-[30px] font-bold  fromLeft">
+            <div className="flex flex-col max-sm:min-w-40">
+              <p className="text-[30px] font-bold fromLeft">
                 {TextSecondPj[language].time.name}
               </p>
               <p className="fromLeft">{TextSecondPj[language].time.content}</p>
