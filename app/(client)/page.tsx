@@ -38,12 +38,11 @@ export default function page() {
             fill
           ></CldImage>
         </div>
-
         <div className="flex flex-col flex-1 sm:min-w-100">
-          <h1 className="text-[80px] max-2xl:text-[60px] fromLeft">
+          <h1 className="text-[80px] max-2xl:text-[60px] text-justify fromLeft">
             {TextAbout[language].title}
           </h1>
-          <p className="text-zinc-500 fromLeft sm:min-w-100">
+          <p className="text-zinc-500 fromLeft text-justify sm:min-w-100">
             {TextAbout[language].subTitle}
           </p>
         </div>
