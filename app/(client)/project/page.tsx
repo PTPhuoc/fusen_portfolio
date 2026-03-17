@@ -60,7 +60,7 @@ export default function page() {
         <div className="absolute -translate-x-full top-0 left-0 w-full h-full bg-blueDark2 duration-300 ease-in-out group-hover:-translate-x-1/5 group-active:translate-x-0"></div>
         <div className="flex flex-col z-1 duration-200 ease-in-out group-hover:text-white group-active:text-white max-w-100">
           <p className="font-bold">{TextProject[language].second.name}</p>
-          <p className="text-start">{TextProject[language].second.name}</p>
+          <p className="text-start">{TextProject[language].second.period}</p>
         </div>
         <svg
           className="w-20 h-20 z-1 fill-blueDark2 shrink-0 group-active:fill-white"
