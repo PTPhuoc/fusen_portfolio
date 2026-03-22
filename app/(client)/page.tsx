@@ -251,7 +251,7 @@ export default function page() {
             {TextAbout[language].education.major}
           </p>
           <p className="w-full text-white fromRight">
-            GPA: 3.1/4
+            GPA: 3.0/4
           </p>
         </div>
       </div>

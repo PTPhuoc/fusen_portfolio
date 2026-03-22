@@ -30,7 +30,7 @@ export default function page() {
   return (
     <div className="w-full pt-25 flex flex-col gap-10 items-center">
       <div className="w-[70%] max-2xl:w-[80%] max-md:w-[95%] flex items-center gap-5 pt-10">
-        <p className="text-blueDark2 font-bold fromRight">11/2024 - 12/2024</p>
+        <p className="text-blueDark2 font-bold fromRight">10/2024 - 12/2024</p>
         <div className="flex-1 h-1 bg-blueDark2 rounded-2xl fromLeft"></div>
       </div>
       <div className="w-[70%] max-2xl:w-[80%] max-md:w-[95%] flex flex-col shadowDefault rounded-2xl">

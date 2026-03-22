@@ -169,7 +169,7 @@ export const TextFirstPj = {
     },
     time: {
       name: "Thời Gian",
-      content: "11/2024 - 12/2024",
+      content: "10/2024 - 12/2024",
     },
     PO: {
       name: "Tổng quan dự án",
@@ -256,7 +256,7 @@ export const TextFirstPj = {
     },
     time: {
       name: "Time Line",
-      content: "11/2024 - 12/2024",
+      content: "10/2024 - 12/2024",
     },
     PO: {
       name: "Project Overview",
