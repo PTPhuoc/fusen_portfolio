@@ -223,7 +223,7 @@ export const TextFirstPj = {
     Achie: {
       name: "Thành tựu",
       content:
-        "Hoàn thành prototype hệ thống đặt lịch khám bệnh trong vòng 2 tháng, thể hiện khả năng phát triển full-stack, thiết kế cơ sở dữ liệu và triển khai quy trình nghiệp vụ thực tế trong lĩnh vực y tế.",
+        "Hoàn thành prototype hệ thống đặt lịch khám bệnh trong vòng 3 tháng, thể hiện khả năng phát triển full-stack, thiết kế cơ sở dữ liệu và triển khai quy trình nghiệp vụ thực tế trong lĩnh vực y tế.",
     },
     CaS: {
       name: "Thách thức & Giải pháp",
@@ -310,7 +310,7 @@ export const TextFirstPj = {
     Achie: {
       name: "Achievements",
       content:
-        "Successfully delivered a fully functional prototype within 2 months, demonstrating strong capabilities in full-stack development, database design, and implementing real-world business workflows for healthcare systems.",
+        "Successfully delivered a fully functional prototype within 3 months, demonstrating strong capabilities in full-stack development, database design, and implementing real-world business workflows for healthcare systems.",
     },
     CaS: {
       name: "Challenges & Solutions",
